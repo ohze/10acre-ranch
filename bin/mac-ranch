@@ -24,24 +24,24 @@ mac-ranch Usage:
   -l - List hosts
   -r registration_url - Register another "-n" hosts using the given registration url
 
-  -b - Boot2Docker URL or version tag (default: v17.03.1-ce)
+  -b - Boot2Docker URL or version tag (default: v17.06.0-ce)
   -M - Host memory in mb (default: 1024)
   -m - Server memory in mb (default: 2048)
   -n - Number of hosts (default: 2)
   -R - REPOS to use for rancher/server:master build
-  -s - Server Container (default: rancher/server:latest)
+  -s - Server Container (default: rancher/server:stable)
        needs full container repo/name[:tag]
   -u - Registry mirror URL (default: none)
 EOF
 }
 
 SERVER_NAME="rs"
-DEFAULT_IMAGE="rancher/server:latest"
+DEFAULT_IMAGE="rancher/server:stable"
 MASTER_IMAGE="rancher/server:master"
 SERVER_IMAGE="${DEFAULT_IMAGE}"
 SERVER_MACHINE_SIZE="2048"
 SERVER_MACHINE_CPUS="2"
-BOOT2DOCKER="https://github.com/boot2docker/boot2docker/releases/download/v17.03.1-ce/boot2docker.iso"
+BOOT2DOCKER="https://github.com/boot2docker/boot2docker/releases/download/v17.06.0-ce/boot2docker.iso"
 BOOT_ARGS="loglevel=3 user=docker console=ttyS0 console=tty0 noembed nomodeset norestore waitusb=10 base"
 HOST_PREFIX="${SERVER_NAME}-host"
 HOST_COUNT=2
